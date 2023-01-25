@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/black-gold/static/css/main.7acaea2f.css",
-    "main.js": "/black-gold/static/js/main.07d3183d.js",
+    "main.css": "/black-gold/static/css/main.aef3c003.css",
+    "main.js": "/black-gold/static/js/main.5a9b9400.js",
+    "static/media/instagram.svg": "/black-gold/static/media/instagram.ecc3eb87f137b55688cd0a6500c2dfee.svg",
+    "static/media/yellow-phone.svg": "/black-gold/static/media/yellow-phone.057dc65a7cbbcc21c23ae9e0b5827c4d.svg",
+    "static/media/phone.svg": "/black-gold/static/media/phone.efcc41e61ec402edc4e0f5e8ca79e1c8.svg",
     "index.html": "/black-gold/index.html",
-    "main.7acaea2f.css.map": "/black-gold/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/black-gold/static/js/main.07d3183d.js.map"
+    "static/media/facebook.svg": "/black-gold/static/media/facebook.85f228f1251b7a73de4df0eb992de3eb.svg",
+    "static/media/menu.svg": "/black-gold/static/media/menu.c6fbc30e76e01fb50bb4ac31a4b0af9c.svg",
+    "static/media/close-phone-button.svg": "/black-gold/static/media/close-phone-button.41139caec86741687de974afb566731c.svg",
+    "static/media/close-menu-button.svg": "/black-gold/static/media/close-menu-button.b755a3573a577daa21b179cfad177c14.svg",
+    "main.aef3c003.css.map": "/black-gold/static/css/main.aef3c003.css.map",
+    "main.5a9b9400.js.map": "/black-gold/static/js/main.5a9b9400.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.aef3c003.css",
+    "static/js/main.5a9b9400.js"
   ]
 }
