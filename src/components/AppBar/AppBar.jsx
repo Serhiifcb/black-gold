@@ -8,6 +8,7 @@ import { ReactComponent as Facebook } from '../../svg/facebook.svg';
 import logo from '../../images/logo-mobile.png';
 import css from './AppBar.module.css'
 import { useState } from 'react';
+import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 
 export const AppBar = () => {
   const [isModal, setIsModal] = useState(false);
@@ -22,7 +23,7 @@ export const AppBar = () => {
           {isPhone && (
             <>
               <YellowPhone style={{ marginRight: '10px' }} />
-              <p className={css.phoneNumber}>098-60-777-99</p>
+              <span className={css.phoneNumber}>098-60-777-99</span>
               <button onClick={() => setIsPhone(false)} ><ClosePhoneIcon/></button >
             </>
           )}
@@ -35,7 +36,7 @@ export const AppBar = () => {
           )}
         </div>
       </div>
-      
+      {isModal && <MobileMenu />}    
     </>
   );
 };

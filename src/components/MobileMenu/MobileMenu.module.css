@@ -1,0 +1,28 @@
+.menuBackdrop {
+  /* width: 100vw; */
+  height: 100vh;
+  padding-top: 46px;
+  background-color: #1A1A1A;
+}
+
+.menuItem {
+  padding-left: 72px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: white;
+}
+
+.menuItem:hover {
+  background: #262626;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 4px 4px 0px;
+  border-right: 5px solid #EAB441;
+  color: #EAB441;
+}
