@@ -1,7 +1,21 @@
 .container {
-  
-  background-color: #36582A;
+  position: relative;
+  background-color: #2D4126;
+  /* background-image: url('../../../public/images/pattern_\ 1\ \(1\).png'); */
   padding: 40px 16px;
+  z-index: 2;
+}
+
+.container::before {
+  content: "";
+    background: url('../../../public/images/pattern_\ 1\ \(1\).png');
+    opacity: 0.06;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
 }
 
 .food {
@@ -13,6 +27,7 @@
     color: white;
     margin-bottom: 16px;
     margin-left: 8px;
+    z-index: 2;
 }
 
 .list {
@@ -31,6 +46,7 @@
     list-style: none;
     margin-left: auto;
     margin-right: auto;
+    z-index: 2;
 }
 
 /* @media screen and (min-width: 500px){
