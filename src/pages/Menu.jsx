@@ -1,5 +1,6 @@
 import { AppBar } from "components/AppBar/AppBar";
 import { MenuList } from "components/MenuList/MenuList";
+import { Footer } from "components/Footer/Footer";
 
 export const Menu = () => {
   
@@ -7,8 +8,9 @@ export const Menu = () => {
     <>
       <AppBar />
       <div>
-        <MenuList />   
+        <MenuList />
       </div>
+      <Footer/>
     </>
   );
 };

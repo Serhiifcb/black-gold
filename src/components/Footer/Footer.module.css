@@ -1,0 +1,124 @@
+.footer {
+  padding: 60px 16px;
+  background: #000000;
+  color: aliceblue;
+}
+
+.mainFooterBlock {
+  margin-bottom: 42px;
+}
+
+.topFooterBlock {
+  margin-bottom: 60px;
+}
+
+.footerHeader {
+  margin-bottom: 30px;
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1px;
+      text-transform: uppercase;
+  color: #999999;
+  opacity: 0.8;
+}
+
+.footerCompanyBlock {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  max-width: 355px;
+}
+
+.footerLinkBlock {
+  margin-bottom: 60px;
+}
+
+.footerLink {
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  text-decoration: none;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.footerText {
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #999999;
+}
+
+.footerMail {
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+}
+
+.creatorCompany {
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footerCompanyBlock {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .topFooterBlock .footerHeader {
+    text-align: center;
+  }
+  .footerLinkBlock {
+    margin-bottom: 0px;
+  }  
+  .mediumFooterBlock {
+    display: flex;
+    justify-content: space-around;
+  }
+  .bottomFooterBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 70px;
+      
+  }
+  .mainFooterBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mediumFooterBlock {
+    display: flex;
+    gap: 70px;
+  }
+    .footerLinkBlock {
+      margin-bottom: 0px;
+      margin-right: ;
+    }
+    .topFooterBlock {
+      margin-right: 60px;
+    }
+}
