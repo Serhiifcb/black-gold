@@ -1,0 +1,22 @@
+.filterButton {
+  position: relative;
+  background-color: #36582A;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.filterButton:hover {
+  background-color: #D7B56D;
+}
+
+.activeFilter {
+  background-color: #EAB441;
+}

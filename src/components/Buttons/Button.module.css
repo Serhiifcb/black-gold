@@ -1,0 +1,18 @@
+.Btn {
+  position: relative;
+  padding: 16px 36px;
+  background-color: #EAB441;
+    border-radius: 50px;
+    font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #FFFFFF;
+      z-index: 2;
+}
+
+.Btn:hover {
+  background-color: #D7B56D;
+}

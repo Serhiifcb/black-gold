@@ -1,9 +1,10 @@
+import { FilterButton } from "components/FilterButtons/FilterButton";
 import { MenuCard } from "components/MenuCard/MenuCard";
 import { useSelector } from "react-redux";
-import css from './MenuList.module.css'
-
+import css from './MenuList.module.css';
 
 export const MenuList = () => {
+  
   const food = useSelector(state => state.activePage);
   const foodList = [
     { name: "Баскайола", url: "./images/pizza.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "165₴", size: "/ 30 см / 450 г" },
@@ -19,12 +20,20 @@ export const MenuList = () => {
     { name: "Тропікана", url: "./images/pizza4.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "165₴", size: "/ 30 см / 450 г" },
     { name: "Б'янко кон карне", url: "./images/pizza3.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "140₴", size: "/ 30 см / 450 г" },
   ];
+  const filters = ["Акційні", "Популярні", "Спочатку дешевші", "Спочатку дорожчі"];
+  
   return (
     <div className={css.container}>
       <p className={css.food}>{food}</p>
+      <div className={css.filterBlock}>
+        {filters.map(itemFilter => <FilterButton key={itemFilter } filter={itemFilter}/>)}
+        {/* <FilterButton filter="Акційні" className={clsx({ [css.activeFilter]: activeFilter === this.props.filter })} onClick={onClick} />
+        <FilterButton filter="Популярні" />
+        <FilterButton filter="Спочатку дешевші" />
+        <FilterButton filter="Спочатку дорожчі"/> */}
+      </div>
       <ul className={css.list}>
         {foodList.map(item => <MenuCard key={item.name} name={item.name} url={item.url} about={item.about} price={item.price} size={item.size } />)}
-        
       </ul>
     </div>
   );
