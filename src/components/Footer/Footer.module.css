@@ -106,19 +106,35 @@
     padding: 70px;
       
   }
+    .footerCompanyBlock {
+      gap: 20px;
+    }
   .mainFooterBlock {
     display: flex;
     justify-content: space-between;
   }
   .mediumFooterBlock {
     display: flex;
-    gap: 70px;
+    gap: 30px;
   }
     .footerLinkBlock {
       margin-bottom: 0px;
-      margin-right: ;
     }
     .topFooterBlock {
       margin-right: 60px;
     }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    padding: 70px 150px 70px 70px;
+
+  }
+  .footerCompanyBlock {
+    gap: 70px;
+  }
+
+  .mediumFooterBlock {
+    gap: 100px;
+  }
 }
