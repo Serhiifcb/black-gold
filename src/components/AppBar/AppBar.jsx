@@ -5,10 +5,10 @@ import { ReactComponent as Phone } from '../../svg/phone.svg';
 import { ReactComponent as YellowPhone } from '../../svg/yellow-phone.svg';
 import { ReactComponent as Instagram } from '../../svg/instagram.svg';
 import { ReactComponent as Facebook } from '../../svg/facebook.svg';
-import logo from '../../images/logo-mobile.png';
 import css from './AppBar.module.css'
 import { useState } from 'react';
 import { MobileMenu } from 'components/MobileMenu/MobileMenu';
+
 
 export const AppBar = () => {
   const [isModal, setIsModal] = useState(false);
@@ -18,7 +18,7 @@ export const AppBar = () => {
       <div className={css.AppBar}>
         {!isModal && <button style={{ marginRight: '25px'}} onClick={() => setIsModal(true)}><MenuIcon/></button >}
         {isModal && <button style={{ marginRight: '25px'}} onClick={() => setIsModal(false)}><CloseMenuIcon/></button >}
-        <img src={logo} alt='logo' />
+        <img src='./images/logo-mobile.png' alt='logo' />
         <div style={{ display: 'flex', marginLeft: 'auto', alignItems: 'center' }}>
           {isPhone && (
             <>
@@ -36,7 +36,7 @@ export const AppBar = () => {
           )}
         </div>
       </div>
-      {isModal && <MobileMenu />}    
+      {isModal && <MobileMenu setIsModal={setIsModal} />}    
     </>
   );
 };
