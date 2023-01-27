@@ -18,7 +18,7 @@ export const AppBar = () => {
       <div className={css.AppBar}>
         {!isModal && <button style={{ marginRight: '25px'}} onClick={() => setIsModal(true)}><MenuIcon/></button >}
         {isModal && <button style={{ marginRight: '25px'}} onClick={() => setIsModal(false)}><CloseMenuIcon/></button >}
-        <img src='./black-gold/images/logo-mobile.png' alt='logo' />
+        <img src='./images/logo-mobile.png' alt='logo' />
         <div style={{ display: 'flex', marginLeft: 'auto', alignItems: 'center' }}>
           {isPhone && (
             <>

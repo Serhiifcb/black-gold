@@ -10,11 +10,11 @@ export const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />} >
+        <Route path="/menu" element={<Layout />} >
           <Route index element={<Menu/>}/>
           {/* <Route path="about" element={<About />} /> */}
         </Route>
-        <Route path="*" element={<Navigate to={"/"} />} />
+        <Route path="*" element={<Navigate to={"/menu"} />} />
       </Routes>
     </>
   );
