@@ -1,6 +1,5 @@
 import css from './MobileMenu.module.css';
 import clsx from "clsx";
-// import { NavLink } from 'react-router-dom';
 import { setActivePage } from 'redux/activePageSlice';
 import { setActiveFilter } from 'redux/activeFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';

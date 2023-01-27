@@ -10,9 +10,9 @@ export const Footer = () => {
         <div className={css.topFooterBlock}>
           <p className={css.footerHeader}>Мережа закладів</p>
           <div className={css.footerCompanyBlock}>
-            <div><img src="./images/logo-peonia.png" alt="logo-peonia" /></div>
-            <div><img src="./images/logo-funny.png" alt="logo-funny" /></div>
-            <div><img src="./images/logo-roof.png" alt="logo-roof" /></div>
+            <div><img src="./black-gold/images/logo-peonia.png" alt="logo-peonia" /></div>
+            <div><img src="./black-gold/images/logo-funny.png" alt="logo-funny" /></div>
+            <div><img src="./black-gold/images/logo-roof.png" alt="logo-roof" /></div>
           </div>
         </div>
         <div className={css.mediumFooterBlock}>
