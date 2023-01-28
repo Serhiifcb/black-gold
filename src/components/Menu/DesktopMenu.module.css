@@ -1,18 +1,12 @@
 .menuBackdrop {
   /* width: 100vw; */
-  position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1200;
   /* height: 100vh; */
   padding-top: 46px;
   background-color: #1A1A1A;
 }
 
 .menuItem {
-  padding-left: 72px;
+  padding-left: 40px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -52,3 +46,11 @@
 .activeLink {
   color: #EAB441;
 }
+
+@media screen and (max-width: 1439px) {
+  .menuBackdrop {
+      /* width: 100vw; */
+      display: none;
+    }
+}
+

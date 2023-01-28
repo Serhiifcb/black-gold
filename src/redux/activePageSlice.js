@@ -4,7 +4,7 @@ const activePageSlice = createSlice({
   name: 'activePage',
   initialState: 'Піца',
   reducers: {
-    setActivePage(state, action) {
+    setActivePage(_, action) {
       return action.payload;
     },
   },

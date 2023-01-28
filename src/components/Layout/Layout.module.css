@@ -1,0 +1,15 @@
+@media screen and (max-width: 1439px) {
+  .noScroll {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .layout {
+    display: flex;
+  }
+  .content {
+    width: 80%;
+  }
+}

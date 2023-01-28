@@ -1,9 +1,7 @@
-.AppBar {
-  position: relative;
-  display: flex;
-  align-items: center;
+.desktopAppBar {
+  display: none;
   background-color: #1A1A1A;
-  padding: 15px 20px 15px 25px;
+  padding-top: 60px;
 }
 
 .phoneNumber {
@@ -16,8 +14,14 @@
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
+.logoDesktop {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width: 1440px) {
-  .AppBar {
-    display: none;
+  .desktopAppBar {
+    display: block;
+    width: 20%;
   }
 }
