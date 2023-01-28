@@ -1,0 +1,87 @@
+.aboutBlock {
+  padding: 40px 16px;
+  background-color: #2D4126;
+}
+
+.aboutTitle {
+  margin-bottom: 16px;
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.aboutText {
+  margin-bottom: 30px;
+  font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.aboutHeader {
+  margin-bottom: 30px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999999;
+  opacity: 0.8;
+}
+
+.aboutMail {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #FFFFFF;
+}
+
+.phoneNumber {
+  margin-right: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.contactText {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #999999;
+}
+
+@media screen and (max-width: 1439px) {
+  .noScroll {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .layout {
+    display: flex;
+  }
+
+  .content {
+    width: 80%;
+  }
+}

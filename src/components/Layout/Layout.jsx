@@ -13,12 +13,10 @@ export const Layout = () => {
     <div className={clsx(css.layout, { [css.noScroll]: isModal })}>
       <AppBar />
       <DesktopAppBar/>
-      {/* {!isModal && ( */}
-        <div className={css.content}>
-          <Outlet />
-          <Footer />
-        </div>
-      {/* )} */}
+      <div className={css.content}>
+        <Outlet />
+        <Footer />
+      </div>
     </div>
   );
 };
