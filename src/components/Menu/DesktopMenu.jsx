@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { setActivePage } from 'redux/activePageSlice';
 import { setActiveFilter } from 'redux/activeFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 export const DesktopMenu = () => {
   const dispatch = useDispatch();
@@ -16,9 +17,9 @@ export const DesktopMenu = () => {
     <ul className={css.menuBackdrop}>
       {menuItems.map(item =>
         <li key={item} className={clsx(css.menuItem, { [css.isActive]: activeItem === item })}>
-          <button className={clsx(css.menuLink, { [css.activeLink]: activeItem === item })} onClick={changeActivePage}>
+          <NavLink to='/menu' className={clsx(css.menuLink, { [css.activeLink]: activeItem === item })} onClick={changeActivePage}>
             {item}
-          </button>
+          </NavLink>
         </li>)
       }
     </ul>
