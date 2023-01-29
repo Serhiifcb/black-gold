@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import css from './Footer.module.css';
 import { ReactComponent as Mail } from '../../svg/mail.svg';
+import { animateScroll as scroll} from 'react-scroll'
 
 export const Footer = () => {
   
@@ -19,7 +20,7 @@ export const Footer = () => {
           <div className={css.footerLinkBlock}>
             <p className={css.footerHeader}>Клієнтам</p>
             <ul className={css.footerLinkList}>
-              <li style={{ marginBottom: '18px' }}><NavLink to='/about' className={css.footerLink}>Про нас</NavLink></li>
+              <li style={{ marginBottom: '18px' }}><NavLink to='/about' className={css.footerLink} onClick={() => scroll.scrollToTop()}>Про нас</NavLink></li>
               <li style={{marginBottom: '18px'}}><NavLink className={css.footerLink}>Завантажити меню</NavLink></li>
               <li style={{marginBottom: '18px'}}><NavLink className={css.footerLink}>Партнерська програма</NavLink></li>
               <li><NavLink className={css.footerLink}>Договір публічної оферти</NavLink></li>

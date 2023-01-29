@@ -4,6 +4,8 @@ import { setActivePage } from 'redux/activePageSlice';
 import { setActiveFilter } from 'redux/activeFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { animateScroll as scroll} from 'react-scroll'
+
 
 export const DesktopMenu = () => {
   const dispatch = useDispatch();
@@ -12,6 +14,7 @@ export const DesktopMenu = () => {
   const changeActivePage = event => {
     dispatch(setActivePage(event.target.textContent));
     dispatch(setActiveFilter(''));
+    scroll.scrollToTop();
   }
   return (
     <ul className={css.menuBackdrop}>

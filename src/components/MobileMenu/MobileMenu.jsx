@@ -5,6 +5,8 @@ import { setActiveFilter } from 'redux/activeFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsModal } from 'redux/isModalSlice';
 import { NavLink } from 'react-router-dom';
+import { animateScroll as scroll} from 'react-scroll'
+
 
 export const MobileMenu = () => {
   const dispatch = useDispatch();
@@ -14,6 +16,7 @@ export const MobileMenu = () => {
     dispatch(setActivePage(event.target.textContent));
     dispatch(setActiveFilter(''));
     dispatch(setIsModal(false));
+    scroll.scrollToTop();
   }
   return (
     <ul className={css.menuBackdrop}>
