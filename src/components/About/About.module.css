@@ -1,3 +1,9 @@
+.layout {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .aboutBlock {
   padding: 40px 16px;
   background-color: #2D4126;
@@ -69,11 +75,31 @@
   color: #999999;
 }
 
+.map {
+  width: 100%;
+  height: 360px; 
+  margin-top: 40px; 
+  border: 4px solid #FFFFFF;
+  border-radius: 20px;
+}
+
 @media screen and (max-width: 1439px) {
   .noScroll {
     height: 100vh;
     overflow-y: hidden;
   }
+}
+
+@media screen and (min-width: 1024px) {
+  .flexContactBlock {
+      display: flex;
+      gap: 60px;
+    }
+  
+    .flexBlock {
+      display: flex;
+      gap: 60px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -83,5 +109,22 @@
 
   .content {
     width: 80%;
+  }
+  
+  .aboutBlock {
+    padding: 80px 45px;
+  }
+
+  .map {
+    height: 480px;
+  }
+  .flexContactBlock {
+    display: flex;
+    gap: 60px;
+  }
+
+  .flexBlock {
+    display: flex;
+    gap: 60px;
   }
 }
