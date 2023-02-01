@@ -4,6 +4,8 @@
   align-items: center;
   background-color: #1A1A1A;
   padding: 15px 20px 15px 25px;
+  /* z-index: 100; */
+  /* width: 100%; */
 }
 
 .phoneNumber {

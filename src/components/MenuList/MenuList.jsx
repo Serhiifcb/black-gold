@@ -2,9 +2,15 @@ import { FilterButton } from "components/FilterButtons/FilterButton";
 import { MenuCard } from "components/MenuCard/MenuCard";
 import { useSelector } from "react-redux";
 import css from './MenuList.module.css';
+import { fetchKitchenMenu } from "redux/menuList/menuListOperations";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 export const MenuList = () => {
-  
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchKitchenMenu())
+  }, [dispatch]);
   const food = useSelector(state => state.activePage);
   const foodList = [
     { name: "Баскайола", url: "./images/pizza1.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "165₴", size: "/ 30 см / 450 г" },
