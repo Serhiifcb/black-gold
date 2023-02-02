@@ -11,7 +11,7 @@ import { animateScroll as scroll} from 'react-scroll'
 export const MobileMenu = () => {
   const dispatch = useDispatch();
   const activeItem = useSelector(state => state.activePage);
-  const menuItems = ["Піца", "Напої", "Перші страви", "Другі страви", "Десерти", "Закуски", "Гаряче", "Комплексні обіди"];
+  // const menuItems = ["Піца", "Напої", "Перші страви", "Другі страви", "Десерти", "Закуски", "Гаряче", "Комплексні обіди"];
   const menu = useSelector(state => state.kitchenMenu.menu);
   const changeActivePage = event => {
     dispatch(setActivePage(event.target.textContent));
