@@ -19,7 +19,7 @@ export const kithenMenuSlice = createSlice({
     [fetchKitchenMenu.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-      state.items = action.payload;
+      state.menu = action.payload;
     },
     [fetchKitchenMenu.pending]: handlePending,
     [fetchKitchenMenu.rejected]: handleRejected,

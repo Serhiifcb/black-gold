@@ -12,6 +12,7 @@ export const MenuList = () => {
     dispatch(fetchKitchenMenu())
   }, [dispatch]);
   const food = useSelector(state => state.activePage);
+  // const menu = useSelector(state => state.menu)
   const foodList = [
     { name: "Баскайола", url: "./images/pizza1.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "165₴", size: "/ 30 см / 450 г" },
     { name: "Емма", url: "./images/pizza2.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "125₴", size: "/ 30 см / 450 г"},
