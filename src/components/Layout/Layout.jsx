@@ -5,18 +5,18 @@ import { Footer } from "components/Footer/Footer";
 import css from "./Layout.module.css"
 import { DesktopAppBar } from "components/DesktopAppBar/DesktopAppBar";
 import { useSelector } from 'react-redux';
-import clsx from "clsx";
+// import clsx from "clsx";
 
 export const Layout = () => {
   const isModal = useSelector(state => state.isModal);
   return (
-    <div className={clsx(css.layout, { [css.noScroll]: isModal })}>
+    <div className={css.layout}>
       <AppBar />
       <DesktopAppBar/>
-      <div className={css.content}>
+      {!isModal && <div className={css.content}>
         <Outlet />
         <Footer />
-      </div>
+      </div>}
     </div>
   );
 };

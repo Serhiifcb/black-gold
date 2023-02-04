@@ -1,63 +1,93 @@
 .container {
   position: relative;
-  background-color: #2D4126;
-  /* background-image: url('../../../public/images/pattern_\ 1\ \(1\).png'); */
   padding: 40px 16px;
+  display: flex;
+  flex: 1 0 auto;
+  background-color: #2D4126;
   z-index: 2;
 }
 
 .container::before {
   content: "";
-    background: url('../../../public/images/pattern_\ 1\ \(1\).png');
-    opacity: 0.06;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../../../public/images/pattern_\ 1\ \(1\).png');
+  background-size: contain;
+  opacity: 0.06;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .food {
+  margin-bottom: 16px;
+  align-self: flex-start;
   font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    color: white;
-    margin-bottom: 16px;
-    margin-left: 8px;
-    z-index: 2;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: white;
+  z-index: 2;
 }
 
 .list {
-  /* margin-top: -30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%; */
+  padding: 0;
   display: grid;
-    max-width: calc(100vw - 48px);
-    grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
-    grid-gap: 30px;
-    /* margin-top: 16px;
-    margin-bottom: 16px; */
-    padding: 0;
-    list-style: none;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
+  justify-items: stretch;
+  grid-row-gap: 1.6rem;
+  row-gap: 1.6rem;
+  grid-column-gap: 1.5rem;
+  column-gap: 1.5rem;
+  list-style: none;
+  z-index: 2;
 }
 
-/* @media screen and (min-width: 500px){
-  .list {
-    gap: 30px;
+@media screen and (max-width: 600px) {
+  .content {
+    max-width: 343px;
   }
-} */
+}
+
+@media screen and (min-width: 600px){
+  .list {
+    grid-template-columns: repeat(2, minmax(230px, 330px));
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .list {
+    grid-template-columns: repeat(3, minmax(230px, 330px));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list {
+    grid-template-columns: repeat(3, minmax(230px, 330px));
+    grid-row-gap: 2.5rem;
+    row-gap: 2.5rem;
+    grid-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .list {
+    grid-template-columns: repeat(4, minmax(250px, 330px));
+  }
+}
 
 .filterBlock {
   display: flex;
   flex-wrap: wrap;
+  align-self: flex-start;
   gap: 8px;
   margin-bottom: 35px;
 }

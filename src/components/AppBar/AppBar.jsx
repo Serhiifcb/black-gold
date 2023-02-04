@@ -37,9 +37,9 @@ export const AppBar = () => {
             </>
           )}
         </div>
-        {isModal && <MobileMenu/>}
+        
       </div>
-      
+      {isModal && <MobileMenu/>}
       
       
     </>

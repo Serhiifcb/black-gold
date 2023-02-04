@@ -20,7 +20,8 @@ export const MobileMenu = () => {
     scroll.scrollToTop();
   }
   return (
-    <ul className={css.menuBackdrop}>
+    <div className={css.menuBackdrop}>
+      <ul>
       {menu.map(item =>
         <li key={item.name} className={clsx(css.menuItem, { [css.isActive]: activeItem === item.name })}>
           <NavLink to='/menu' className={clsx(css.menuLink, { [css.activeLink]: activeItem === item.name })} onClick={changeActivePage}>
@@ -28,6 +29,7 @@ export const MobileMenu = () => {
           </NavLink>
         </li>)
       }
-    </ul>
+      </ul>
+    </div>
   );
 };
