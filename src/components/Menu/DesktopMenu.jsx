@@ -3,12 +3,11 @@ import clsx from "clsx";
 import { setActivePage, setActiveId } from 'redux/activePageSlice';
 import { setActiveFilter } from 'redux/activeFilterSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { animateScroll as scroll} from 'react-scroll'
 import styled from "styled-components";
 import { fetchMenu } from 'redux/menu/menuOperations';
-import { useEffect, useState } from 'react';
-import { setActiveRootCategory } from 'redux/activeRootCategorySlice';
+import { useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
 const StyledRootLink = styled(NavLink)`

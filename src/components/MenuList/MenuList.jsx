@@ -2,10 +2,10 @@ import { FilterButton } from "components/FilterButton/FilterButton";
 import { MenuCard } from "components/MenuCard/MenuCard";
 import { useSelector } from "react-redux";
 import css from './MenuList.module.css';
-import { fetchMenu, fetchMenuList } from "redux/menu/menuOperations";
+import { fetchMenuList } from "redux/menu/menuOperations";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 export const MenuList = () => {
   // const { rootCategory, category } = useParams();
@@ -25,7 +25,6 @@ export const MenuList = () => {
 
   const foodList = useSelector(state => state.menu.menuList);
   const actveCategory = useSelector(state => state.activePage.name);
-  // const foodList = menu.find(element => element.name === food);
   const filters = ["Акційні", "Популярні", "Спочатку дешевші", "Спочатку дорожчі"];
   
   return (

@@ -1,10 +1,5 @@
-// import { Outlet } from "react-router-dom";
-import { AppBar } from "components/AppBar/AppBar";
-import { Footer } from "components/Footer/Footer";
 import css from "./AboutBlock.module.css"
-import { DesktopAppBar } from "components/DesktopAppBar/DesktopAppBar";
 import { useSelector } from 'react-redux';
-// import clsx from "clsx";
 import { Button } from "components/Buttons/Button";
 import { ReactComponent as Mail } from '../../svg/mail.svg';
 import { ReactComponent as YellowPhone } from '../../svg/yellow-phone.svg';
@@ -16,8 +11,6 @@ export const AboutBlock = () => {
   const isModal = useSelector(state => state.isModal);
   return (
     <div className={css.layout}>
-      {/* <AppBar />
-      <DesktopAppBar/> */}
       {!isModal && <div className={css.content}>
         <div className={css.aboutBlock}>
           <div className={css.flexBlock}>
@@ -66,7 +59,6 @@ export const AboutBlock = () => {
             referrerPolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-        {/* <Footer /> */}
       </div>}
     </div>
   );
