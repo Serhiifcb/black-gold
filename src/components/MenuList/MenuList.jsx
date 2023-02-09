@@ -1,44 +1,42 @@
-import { FilterButton } from "components/FilterButtons/FilterButton";
+import { FilterButton } from "components/FilterButton/FilterButton";
 import { MenuCard } from "components/MenuCard/MenuCard";
 import { useSelector } from "react-redux";
 import css from './MenuList.module.css';
-import { fetchKitchenMenu } from "redux/menuList/menuListOperations";
+import { fetchMenu, fetchMenuList } from "redux/menu/menuOperations";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export const MenuList = () => {
+  // const { rootCategory, category } = useParams();
   const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchMenu())
+  // }, [dispatch]);
+  const activeCategoryId = useSelector(state => state.activePage.id);
+  // // console.log('rootMenu: ', rootMenu);
+  // let categoryList = [];
+  // let activeCategory;
+  // categoryList = rootMenu.find(element => element.slug === rootCategory);
+  // categoryList && (activeCategory = categoryList.find(element => element.slug === category));1
   useEffect(() => {
-    dispatch(fetchKitchenMenu())
-  }, [dispatch]);
-  const food = useSelector(state => state.activePage);
-  const menu = useSelector(state => state.kitchenMenu.menu)
-  const foodList = menu.find(element => element.name === food);
-  // const foodList = [
-  //   { name: "Баскайола", url: "./images/pizza1.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "165₴", size: "/ 30 см / 450 г" },
-  //   { name: "Емма", url: "./images/pizza2.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "125₴", size: "/ 30 см / 450 г"},
-  //   { name: "Цезаре", url: "./images/pizza3.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "175₴", size: "/ 30 см / 450 г" },
-  //   { name: "Веган Чіз", url: "./images/pizza4.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "165₴", size: "/ 30 см / 450 г" },
-  //   { name: "Потрійний сир", url: "./images/pizza3.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "135₴", size: "/ 30 см / 450 г" },
-  //   { name: "Базилік", url: "./images/pizza4.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "140₴", size: "/ 30 см / 450 г" },
-  //   { name: "Папероні", url: "./images/pizza1.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "180₴", size: "/ 30 см / 450 г" },
-  //   { name: "Капрезе", url: "./images/pizza2.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "155₴", size: "/ 30 см / 450 г" },
-  //   { name: "Мисливська", url: "./images/pizza1.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "150₴", size: "/ 30 см / 450 г" },
-  //   { name: "Кватро формаджі", url: "./images/pizza2.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "175₴", size: "/ 30 см / 450 г" },
-  //   { name: "Тропікана", url: "./images/pizza4.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "165₴", size: "/ 30 см / 450 г" },
-  //   { name: "Б'янко кон карне", url: "./images/pizza3.png", about: "Моцарела, томати чері, рукола, пармезан, вершки, сухий орегано", price: "140₴", size: "/ 30 см / 450 г" },
-  // ];
+    dispatch(fetchMenuList(activeCategoryId))
+  }, [dispatch, activeCategoryId]);
+
+  const foodList = useSelector(state => state.menu.menuList);
+  const actveCategory = useSelector(state => state.activePage.name);
+  // const foodList = menu.find(element => element.name === food);
   const filters = ["Акційні", "Популярні", "Спочатку дешевші", "Спочатку дорожчі"];
   
   return (
     <div className={css.container}>
       <div className={css.content}>
-        <p className={css.food}>{food}</p>
+        <p className={css.food}>{actveCategory}</p>
         <div className={css.filterBlock}>
           {filters.map(itemFilter => <FilterButton key={itemFilter } filter={itemFilter}/>)}
         </div>
         <ul className={css.list}>
-          {(menu.length > 0) && (foodList.products.map(item => <MenuCard key={item.name} name={item.name} url={item.image} about={item.description} price={item.price} size={item.weight} />))}
+          {(foodList.length > 0) && (foodList.map(item => <MenuCard key={item.id} name={item.name} url={item.image} about={item.description} price={item.price} size={item.weight} />))}
         </ul>
       </div>
     </div>

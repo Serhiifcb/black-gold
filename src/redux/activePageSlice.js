@@ -2,12 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const activePageSlice = createSlice({
   name: 'activePage',
-  initialState: 'ЗАКУСКИ',
+  initialState: { id: 5, name: 'ЗАКУСКИ' },
   reducers: {
-    setActivePage(_, action) {
-      return action.payload;
+    setActivePage(state, action) {
+      state.name = action.payload;
+    },
+    setActiveId(state, action) {
+      state.id = action.payload;
     },
   },
 });
-export const { setActivePage } = activePageSlice.actions;
+export const { setActivePage, setActiveId } = activePageSlice.actions;
 export default activePageSlice.reducer;

@@ -8,6 +8,8 @@
 
 body {
   margin: 0;
+  font-family: 'Raleway';
+  font-style: normal;
 }
 
 h1,
@@ -41,4 +43,3 @@ button {
   background-color: transparent;
   border: none;
 }
-

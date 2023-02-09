@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { About } from "./About/About";
+import { About } from "pages/About";
 import { Navigate } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
 import { Menu } from "pages/Menu";
@@ -10,12 +10,20 @@ export const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/menu" element={<Layout />} >
-          <Route index element={<Menu/>}/> 
+        <Route path="/" element={<Layout />} >
+          <Route index element={<Navigate to={"/menyu-kuhni/zakuski"} />} /> 
+          <Route path=":rootCategory" element={<Menu />} >
+            <Route path=":category" element={<Menu />} />
+          </Route>
+          {/* <Route path="/kids-menyu" element={<Menu />} />
+          <Route path="/menyu-bara" element={<Menu />} />
+          <Route path="/karta-vin" element={<Menu />} /> */}
+          <Route path="/about" element={<About />} />
         </Route>
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Navigate to={"/menu"} />} />
+        <Route path="*" element={<Navigate to={"/menyu-kuhni/zakuski"} />} />
       </Routes>
     </>
   );
 };
+
+// /menyu-kuhni

@@ -14,7 +14,7 @@ export const DesktopAppBar = () => {
       <div className={css.desktopAppBar}>
         <img src='./images/logo-desktop.png' alt='logo' className={css.logoDesktop} />
         <DesktopMenu/>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '150px', marginBottom: '60px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '150px'}}>
           {isPhone && (
             <>
               <YellowPhone style={{ marginRight: '10px' }} />

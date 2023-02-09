@@ -1,7 +1,7 @@
 // import { Outlet } from "react-router-dom";
 import { AppBar } from "components/AppBar/AppBar";
 import { Footer } from "components/Footer/Footer";
-import css from "./About.module.css"
+import css from "./AboutBlock.module.css"
 import { DesktopAppBar } from "components/DesktopAppBar/DesktopAppBar";
 import { useSelector } from 'react-redux';
 // import clsx from "clsx";
@@ -12,12 +12,12 @@ import { ReactComponent as Instagram } from '../../svg/instagram.svg';
 import { ReactComponent as Facebook } from '../../svg/facebook.svg';
 import Gallery from "components/Slider/Slider";
 
-export const About = () => {
+export const AboutBlock = () => {
   const isModal = useSelector(state => state.isModal);
   return (
     <div className={css.layout}>
-      <AppBar />
-      <DesktopAppBar/>
+      {/* <AppBar />
+      <DesktopAppBar/> */}
       {!isModal && <div className={css.content}>
         <div className={css.aboutBlock}>
           <div className={css.flexBlock}>
@@ -66,7 +66,7 @@ export const About = () => {
             referrerPolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>}
     </div>
   );
