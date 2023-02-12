@@ -79,6 +79,10 @@
 }
 
 @media screen and (min-width: 1800px) {
+
+  .container {
+    padding: 60px 45px;
+  }
   .list {
     grid-template-columns: repeat(4, minmax(250px, 330px));
   }

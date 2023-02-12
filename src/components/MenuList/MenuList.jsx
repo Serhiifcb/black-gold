@@ -5,32 +5,37 @@ import css from './MenuList.module.css';
 import { fetchMenuList } from "redux/menu/menuOperations";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export const MenuList = () => {
-  // const { rootCategory, category } = useParams();
+  
+  
+  const { rootCategory, category } = useParams();  
+  const rootMenu = useSelector(state => state.menu.categories);
+  console.log('rootMenu: ', rootMenu);
+  const categoryList = rootMenu.find(element => element.slug === rootCategory);
+  console.log('categoryList: ', categoryList);
+  const activeCategory1 = categoryList ? categoryList.children.find(element => element.slug === category) : null;
+  console.log('activeCategory1: ', activeCategory1);
+
+
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchMenu())
-  // }, [dispatch]);
-  const activeCategoryId = useSelector(state => state.activePage.id);
-  // // console.log('rootMenu: ', rootMenu);
-  // let categoryList = [];
-  // let activeCategory;
-  // categoryList = rootMenu.find(element => element.slug === rootCategory);
-  // categoryList && (activeCategory = categoryList.find(element => element.slug === category));1
+  // const activeCategoryId = useSelector(state => state.activePage.id);
+  const activeCategoryId = (!activeCategory1 && categoryList) ? categoryList.children[0].id : activeCategory1 ? activeCategory1.id : 5;
+  console.log('activeCategoryId: ', activeCategoryId);
+  
   useEffect(() => {
     dispatch(fetchMenuList(activeCategoryId))
   }, [dispatch, activeCategoryId]);
 
   const foodList = useSelector(state => state.menu.menuList);
-  const actveCategory = useSelector(state => state.activePage.name);
+  // const activeCategory = useSelector(state => state.activePage.name);
   const filters = ["Акційні", "Популярні", "Спочатку дешевші", "Спочатку дорожчі"];
   
   return (
     <div className={css.container}>
       <div className={css.content}>
-        <p className={css.food}>{actveCategory}</p>
+        {activeCategory1 ? <p className={css.food}>{activeCategory1.name}</p> : categoryList ? <p className={css.food}>{categoryList.children[0].name}</p> : <p className={css.food}></p>}
         <div className={css.filterBlock}>
           {filters.map(itemFilter => <FilterButton key={itemFilter } filter={itemFilter}/>)}
         </div>

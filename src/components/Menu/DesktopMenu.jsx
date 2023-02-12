@@ -36,15 +36,22 @@ export const DesktopMenu = () => {
     dispatch(fetchMenu())
   }, [dispatch]);
   // let activeCategory;
-  
   const rootMenu = useSelector(state => state.menu.categories);
-  console.log('rootMenu: ', rootMenu);
+  // console.log('rootMenu: ', rootMenu);
   const categoryList = rootMenu.find(element => element.slug === rootCategory);
-  
-  
+  // console.log('categoryList: ', categoryList);
+  // const activeCategory = categoryList ? categoryList.children.find(element => element.slug === category) : null;
+  // console.log('activeCategory: ', activeCategory);
+
+  // useEffect(() => {
+  //   !activeCategory && dispatch(setActivePage(categoryList.children[0].name))
+  //   !activeCategory && dispatch(setActiveId(categoryList.children[0].id))
+  //   activeCategory && dispatch(setActivePage(activeCategory.name));
+  //   activeCategory && dispatch(setActiveId(activeCategory.id));
+  // }, [dispatch, activeCategory, categoryList.children]);
+
   const changeActivePage = event => {
     dispatch(setActivePage(event.target.textContent));
-    // console.log(activeCategory);
     dispatch(setActiveFilter(''));
     scroll.scrollToTop();
   }
@@ -57,6 +64,7 @@ export const DesktopMenu = () => {
   const setFirstActiveCategory = (activeId) => {
     console.log('activeId: ', activeId);
     dispatch(setActiveId(activeId[0].id)); 
+    dispatch(setActivePage(activeId[0].name));
   }
   const setActiveCategory = (activeId) => {
     dispatch(setActiveId(activeId));

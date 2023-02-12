@@ -4,7 +4,6 @@ import { Navigate } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
 import { Menu } from "pages/Menu";
 
-
 export const App = () => {
   
   return (
@@ -15,9 +14,6 @@ export const App = () => {
           <Route path=":rootCategory" element={<Menu />} >
             <Route path=":category" element={<Menu />} />
           </Route>
-          {/* <Route path="/kids-menyu" element={<Menu />} />
-          <Route path="/menyu-bara" element={<Menu />} />
-          <Route path="/karta-vin" element={<Menu />} /> */}
           <Route path="/about" element={<About />} />
         </Route>
         <Route path="*" element={<Navigate to={"/menyu-kuhni/zakuski"} />} />

@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   z-index: 2;
-  max-width: 330px;
+  max-width: 343px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0.4rem 0.4rem 1.5rem rgb(0 0 0 / 40%);
 }
 
-.image {
-  max-width: 330px;
+.image, .defaultImage {
+  max-width: 343px;
   height: 230px;
   overflow: hidden;
 }

@@ -11,7 +11,7 @@ export const fetchMenu = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get('/categories');
-      console.log('fetchMenu:', res.data.data);
+      // console.log('fetchMenu:', res.data.data);
       return res.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -24,7 +24,7 @@ export const fetchMenuList = createAsyncThunk(
   async (id, thunkAPI) => {
     try {
       const res = await axios.get(`/product_category/${id}`);
-      console.log('fetchMenuList: ', res.data.data);
+      // console.log('fetchMenuList: ', res.data.data);
       return res.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
