@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import css from './Footer.module.css';
 import { ReactComponent as Mail } from '../../svg/mail.svg';
-import { animateScroll as scroll} from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
+import logoFunny from '../../svg/logo-funny.png';
+import logoPeonia from '../../svg/logo-peonia.png';
+import logoRoof from '../../svg/logo-roof.png';
 
 export const Footer = () => {
   
@@ -11,9 +14,9 @@ export const Footer = () => {
         <div className={css.topFooterBlock}>
           <p className={css.footerHeader}>Мережа закладів</p>
           <div className={css.footerCompanyBlock}>
-            <div><img src="./images/logo-peonia.png" alt="logo-peonia" /></div>
-            <div><img src="./images/logo-funny.png" alt="logo-funny" /></div>
-            <div><img src="./images/logo-roof.png" alt="logo-roof" /></div>
+            <div><img src={logoPeonia} alt="logo-peonia" /></div>
+            <div><img src={logoFunny} alt="logo-funny" /></div>
+            <div><img src={logoRoof} alt="logo-roof" /></div>
           </div>
         </div>
         <div className={css.mediumFooterBlock}>
