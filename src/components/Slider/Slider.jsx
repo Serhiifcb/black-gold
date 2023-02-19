@@ -1,32 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
 import "./Slider.css"
 import '../../index.css'
-
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "red"}}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-  
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "green"}}
-//       onClick={onClick}
-//     />
-//   );
-// }
 
 export default class Gallery extends Component {
   constructor(props) {
@@ -45,48 +20,19 @@ export default class Gallery extends Component {
   }
   render() {
     const settings = {
-      // customPaging: function(i) {
-      //   return (
-      //     <button>{i + 1}</button>
-      //     // <a>
-      //       // <img src={`./images/pizza${i+1}.png`} alt='food' />
-      //     // </a>
-      //   );
-      // },
-      // fade: true,
-      // centerMode: true,
-      // centerMode: true,
       dots: false,
-      // dotsClass: "slick-dots slick-thumb",
       infinite: false,
       speed: 10,
       slidesToShow: 1,
       slidesToScroll: 1,
-      // nextArrow: <SampleNextArrow />,
-      // prevArrow: <SamplePrevArrow />
     };
     const settingsSmall = {
-      // customPaging: function(i) {
-      //   return (
-      //     <button>{i + 1}</button>
-      //     // <a>
-      //       // <img src={`./images/pizza${i+1}.png`} alt='food' />
-      //     // </a>
-      //   );
-      // },
-      // fade: true,
-      // centerMode: true,
-      // centerMode: true,
-      // centerMode: true,
       dots: false,
       arrows: false,
-      // dotsClass: "slick-dots slick-thumb",
       infinite: false,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
-      // nextArrow: <SampleNextArrow />,
-      // prevArrow: <SamplePrevArrow />
     };
     return (
       <>

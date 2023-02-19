@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchMenu, fetchMenuList } from './menuOperations';
-// import { toast } from 'react-toastify';
 
 const handlePending = state => {
   state.isLoading = true;

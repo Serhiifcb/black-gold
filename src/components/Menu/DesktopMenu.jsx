@@ -52,7 +52,6 @@ export const DesktopMenu = () => {
   }
 
   const setFirstActiveCategory = (activeId) => {
-    console.log('activeId: ', activeId);
     dispatch(setActiveId(activeId[0].id)); 
     dispatch(setActivePage(activeId[0].name));
   }
@@ -79,7 +78,6 @@ export const DesktopMenu = () => {
             key={item.name}
             className={clsx(css.menuItem, css.menuLink)}
             to={`/${rootCategory}/${item.slug}`}
-            // className={clsx(css.menuLink, {[css.activeLink]: activeCategory === item.name })}
             onClick={(event) => { changeActivePage(event); setActiveCategory(item.id) }}>
             {item.name}
           </StyledCategoryLink>

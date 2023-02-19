@@ -1,4 +1,4 @@
-import cardDefault from '../../svg/card-default.jpg';
+import cardDefault from '../../images/card-default.jpg';
 import css from './MenuCard.module.css';
 
 export const MenuCard = ({ name, url, about, price, size }) => {

@@ -1,17 +1,9 @@
 .desktopAppBar {
-  /* position: fixed; */
   display: none;
   background-color: #1A1A1A;
   padding: 60px 0;
   box-shadow: 0.4rem 0.4rem 1.5rem rgb(0 0 0 / 40%);
   z-index: 3;
-  /* height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 40;
-    overflow-x: hidden; */
-  /* overflow-y: scroll; */
 }
 
 .phoneNumber {

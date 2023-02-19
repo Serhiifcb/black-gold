@@ -1,10 +1,10 @@
 import css from "./AboutBlock.module.css"
 import { useSelector } from 'react-redux';
 import { Button } from "components/Buttons/Button";
-import { ReactComponent as Mail } from '../../svg/mail.svg';
-import { ReactComponent as YellowPhone } from '../../svg/yellow-phone.svg';
-import { ReactComponent as Instagram } from '../../svg/instagram.svg';
-import { ReactComponent as Facebook } from '../../svg/facebook.svg';
+import { ReactComponent as Mail } from '../../images/mail.svg';
+import { ReactComponent as YellowPhone } from '../../images/yellow-phone.svg';
+import { ReactComponent as Instagram } from '../../images/instagram.svg';
+import { ReactComponent as Facebook } from '../../images/facebook.svg';
 import Gallery from "components/Slider/Slider";
 
 export const AboutBlock = () => {
@@ -30,18 +30,28 @@ export const AboutBlock = () => {
               <p className={css.aboutHeader}>Контакти</p>
               <div className={css.flexContactBlock}>
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <Mail style={{ marginRight: '12px' }} />
-                    <span className={css.aboutMail}>black_gold@gmail.com</span>
+                  <div>
+                    <a href="mailto:black_gold@gmail.com" style={{ display: 'flex', alignItems: 'center' }}>
+                      <Mail style={{ marginRight: '12px' }} />
+                      <span className={css.aboutMail}>black_gold@gmail.com</span>
+                    </a>
                   </div>
                   <div style={{ marginTop: '18px', display: 'flex', alignItems: 'center', marginBottom: '30px' }}>
-                    <YellowPhone style={{ marginRight: '10px' }} />
-                    <span className={css.phoneNumber}>098-60-777-99</span>
+                    <a href="tel:+380986077799" style={{ display: 'flex', alignItems: 'center'}}>
+                      <YellowPhone style={{ marginRight: '10px' }} />
+                      <span className={css.phoneNumber}>098-60-777-99</span>
+                    </a>
                   </div>
-                  <Instagram style={{ marginRight: '20px' }} />
-                  <Facebook />
+                  <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <a href="https://www.instagram.com/restaurant.black.gold/" style={{ display: 'flex', alignItems: 'center' }}>
+                      <Instagram style={{ marginRight: '20px' }} />
+                    </a>
+                    <a href="https://www.facebook.com/restoran.black.gold/" style={{ display: 'flex', alignItems: 'center' }}>
+                      <Facebook />
+                    </a>
+                  </div>
                 </div>
-                <div style={{ marginTop: '24px' }}>
+                <div>
                   <p className={css.contactText}>м. Луцьк, вул. Фабрична, 1</p>
                   <p className={css.contactText}>Пн–Пт: 8:00 – 22:00,</p>
                   <p className={css.contactText}>Сб–Нд: 8:00 – 23:00</p>

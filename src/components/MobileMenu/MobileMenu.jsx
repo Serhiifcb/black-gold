@@ -11,6 +11,7 @@ import styled from "styled-components";
 import { useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
+
 const StyledRootLink = styled(NavLink)`
   &.active {
     background-color: #d7b56d;
@@ -30,28 +31,6 @@ const StyledCategoryLink = styled(NavLink)`
 `;
 
 export const MobileMenu = () => {
-  // const dispatch = useDispatch();
-  // const activeItem = useSelector(state => state.activePage);
-  // const menu = useSelector(state => state.kitchenMenu.menu);
-  // const changeActivePage = event => {
-  //   dispatch(setActivePage(event.target.textContent));
-  //   dispatch(setActiveFilter(''));
-  //   dispatch(setIsModal(false));
-  //   scroll.scrollToTop();
-  // }
-  // return (
-  //   <div className={css.menuBackdrop}>
-  //     <ul>
-  //     {menu.map(item =>
-  //       <li key={item.name} className={clsx(css.menuItem, { [css.isActive]: activeItem === item.name })}>
-  //         <NavLink to='/menu' className={clsx(css.menuLink, { [css.activeLink]: activeItem === item.name })} onClick={changeActivePage}>
-  //           {item.name}
-  //         </NavLink>
-  //       </li>)
-  //     }
-  //     </ul>
-  //   </div>
-  // );
 
   const { rootCategory } = useParams();
   const dispatch = useDispatch();
@@ -73,7 +52,6 @@ export const MobileMenu = () => {
 
   const changeActiveRootCategory = () => {
     dispatch(setActiveFilter(''));
-    // dispatch(setIsModal(false));
     scroll.scrollToTop();
   }
 
@@ -106,7 +84,6 @@ export const MobileMenu = () => {
               key={item.name}
               className={clsx(css.menuItem, css.menuLink)}
               to={`/${rootCategory}/${item.slug}`}
-              // className={clsx(css.menuLink, {[css.activeLink]: activeCategory === item.name })}
               onClick={(event) => { changeActivePage(event); setActiveCategory(item.id) }}>
               {item.name}
             </StyledCategoryLink>
