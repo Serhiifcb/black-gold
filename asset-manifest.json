@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/black-gold/static/css/main.bf079fe0.css",
-    "main.js": "/black-gold/static/js/main.371740a9.js",
+    "main.css": "/black-gold/static/css/main.cc01da49.css",
+    "main.js": "/black-gold/static/js/main.28508457.js",
     "static/media/card-default.jpg": "/black-gold/static/media/card-default.659b5eaa7851faa77780.jpg",
     "static/media/pattern_ 1 (1).png": "/black-gold/static/media/pattern_ 1 (1).beed13005d4150fb6136.png",
+    "static/media/logo-desktop.png": "/black-gold/static/media/logo-desktop.f98804c5ad9e82d7c937.png",
     "static/media/instagram.svg": "/black-gold/static/media/instagram.ecc3eb87f137b55688cd0a6500c2dfee.svg",
     "static/media/yellow-phone.svg": "/black-gold/static/media/yellow-phone.057dc65a7cbbcc21c23ae9e0b5827c4d.svg",
     "static/media/phone.svg": "/black-gold/static/media/phone.efcc41e61ec402edc4e0f5e8ca79e1c8.svg",
@@ -15,11 +16,11 @@
     "static/media/close-menu-button.svg": "/black-gold/static/media/close-menu-button.b755a3573a577daa21b179cfad177c14.svg",
     "static/media/arrow-left.svg": "/black-gold/static/media/arrow-left.1dc140c6032ff89306e8.svg",
     "static/media/arrow-right.svg": "/black-gold/static/media/arrow-right.e3196a30afe82cf2dc15.svg",
-    "main.bf079fe0.css.map": "/black-gold/static/css/main.bf079fe0.css.map",
-    "main.371740a9.js.map": "/black-gold/static/js/main.371740a9.js.map"
+    "main.cc01da49.css.map": "/black-gold/static/css/main.cc01da49.css.map",
+    "main.28508457.js.map": "/black-gold/static/js/main.28508457.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf079fe0.css",
-    "static/js/main.371740a9.js"
+    "static/css/main.cc01da49.css",
+    "static/js/main.28508457.js"
   ]
 }
